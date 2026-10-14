@@ -1,0 +1,7 @@
+generated: '2026-10-14'
+method: derived
+source: openapi/wagepoint-openapi.yml
+deployment:
+  mode: none
+  auth: unknown
+  verified: derived

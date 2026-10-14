@@ -1,23 +1,102 @@
 aid: wagepoint
 name: Wagepoint
-description: 'Wagepoint is a company surfaced via the API Evangelist harvest backlog (source: tag-qc)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://www.wagepoint.com/wp-content/uploads/2026/04/Homepage-_-General.png
+description: Wagepoint provides cloud‑based payroll software for small and medium‑size businesses in Canada. The platform simplifies payroll processing,
+  tax calculations, and compliance for a variety of industries including healthcare, hospitality, construction, retail, and professional services.
+  Users can run payroll, generate T4 slips, manage employee benefits, and integrate with accounting tools such as Xero and QuickBooks. Wagepoint
+  emphasizes ease of use, automated tax filing, and dedicated support, positioning itself as a friendly, modern payroll solution for Canadian
+  employers.
 url: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-14 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-13'
 modified: '2026-10-13'
 tags:
 - Company
-apis: []
+- Payroll
+- Canada
+- SaaS
+- Small Business
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Spectral
+  url: rules/wagepoint-rules.yml
+- type: JSONLD
+  url: json-ld/wagepoint-context.jsonld
+- type: Vocabulary
+  url: vocabulary/wagepoint-vocabulary.yml
+- type: Idempotency
+  url: conventions/wagepoint-conventions.yml
+- type: Conventions
+  url: conventions/wagepoint-conventions.yml
+- type: Conformance
+  url: conformance/wagepoint-conformance.yml
+- type: Plans
+  url: plans/wagepoint-plans-pricing.yml
+- type: DataModel
+  url: data-model/wagepoint-data-model.yml
+- type: Compliance
+  url: https://trust.wagepoint.com/
+- type: ErrorCatalog
+  url: errors/wagepoint-problem-types.yml
+- type: Hosts
+  url: hosts/wagepoint-hosts.yml
+- type: TermsOfService
+  url: https://www.wagepoint.com/legal/terms-of-service/
+- type: Pricing
+  url: https://www.wagepoint.com/pricing/
+- type: Newsroom
+  url: https://www.wagepoint.com/newsroom/
+- type: Login
+  url: https://www.wagepoint.com/login/
+- type: ChangeLog
+  url: https://www.wagepoint.com/whats-new/
+- type: Blog
+  url: https://www.wagepoint.com/resources/blog/
+- type: GitHubOrganization
+  url: https://github.com/WagePoint
+- type: TrustCenter
+  url: security/wagepoint-trust-center.yml
+- type: DomainSecurity
+  url: security/wagepoint-domain-security.yml
 - type: Website
   url: https://wagepoint.com
+apis:
+- name: Wagepoint Public API
+  description: Public REST API for partners and integrations to access Wagepoint Company, Person, Pay Group, and Time data.
+  humanURL: https://api.wagepoint.com/swagger.json
+  baseURL: https://api.wagepoint.com/api
+  aid: wagepoint:wagepoint-public-api
+- aid: wagepoint:wagepoint-public-api-api
+  name: Wagepoint Public API API
+  description: Public REST API for partners and integrations to access Wagepoint Company, Person, Pay Group, and Time data.
+  humanURL: https://api.wagepoint.com/swagger.json
+  baseURL: /api
+  properties:
+  - type: OpenAPI
+    url: openapi/_original/wagepoint-api-openapi.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-company-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-request-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-company-list-item-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-person-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-create-time-entries-request-schema.json
+x-enrichment:
+  date: '2026-10-14'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

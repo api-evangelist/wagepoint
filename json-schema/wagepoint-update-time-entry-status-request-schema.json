@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wagepoint/main/json-schema/wagepoint-update-time-entry-status-request-schema.json",
+  "title": "update_time_entry_status_request",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_original/wagepoint-api-openapi.json#/components/schemas/update_time_entry_status_request",
+  "type": "object",
+  "properties": {
+    "time_entry_ids": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "action": {
+      "enum": [
+        "approve",
+        "unapprove",
+        "reject"
+      ],
+      "type": [
+        "string",
+        "null"
+      ],
+      "default": "approve"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

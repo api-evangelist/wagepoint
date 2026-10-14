@@ -1,0 +1,77 @@
+generated: '2026-10-14'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/_original/wagepoint-api-openapi.json
+format: rfc9457
+envelope:
+  media_type: application/problem+json
+  schema: problem_details
+coverage:
+  operations: 11
+  statuses_declared: 9
+problems:
+- status: 400
+  title: Bad Request
+  description: Invalid request
+  operations: 6
+  media_types:
+  - application/problem+json
+  schema: problem_details
+- status: 401
+  title: Unauthorized
+  description: Missing or invalid token
+  operations: 6
+  media_types:
+  - application/problem+json
+  schema: problem_details
+- status: 403
+  title: Forbidden
+  description: Forbidden
+  operations: 2
+  media_types:
+  - application/problem+json
+  schema: problem_details
+- status: 404
+  title: Not Found
+  description: CIMD client URL is not configured
+  operations: 2
+  media_types:
+  - application/problem+json
+  schema: problem_details
+- status: 422
+  title: Unprocessable Content
+  description: A value could not be converted to the expected type
+  operations: 4
+  media_types:
+  - application/problem+json
+  schema: problem_details
+- status: 500
+  title: Internal Server Error
+  description: Internal error
+  operations: 2
+  media_types:
+  - application/problem+json
+  schema: problem_details
+- status: 502
+  title: Bad Gateway
+  description: Upstream bad response or contract violation
+  operations: 2
+  media_types:
+  - application/problem+json
+  schema: problem_details
+- status: 503
+  title: Service Unavailable
+  description: Upstream unavailable
+  operations: 3
+  media_types:
+  - application/problem+json
+  - application/json
+  schema: problem_details
+- status: 504
+  title: Gateway Timeout
+  description: Upstream timeout
+  operations: 2
+  media_types:
+  - application/problem+json
+  schema: problem_details

@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wagepoint/main/json-schema/wagepoint-paged-response-person-response-schema.json",
+  "title": "paged_response_person_response",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_original/wagepoint-api-openapi.json#/components/schemas/paged_response_person_response",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/person_response"
+      }
+    },
+    "page_info": {
+      "$ref": "#/$defs/page_info"
+    }
+  },
+  "$defs": {
+    "page_info": {
+      "type": "object",
+      "properties": {
+        "after": {
+          "type": "string"
+        },
+        "page_size": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "has_more": {
+          "type": "boolean"
+        }
+      }
+    },
+    "person_address_response": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "line1": {
+          "type": "string"
+        },
+        "line2": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "postal_code": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      }
+    },
+    "person_response": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "company_id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "person_type": {
+          "enum": [
+            "not_defined",
+            "employee",
+            "contractor",
+            "other"
+          ],
+          "type": "string",
+          "default": "not_defined"
+        },
+        "status": {
+          "enum": [
+            "not_defined",
+            "not_specified",
+            "active",
+            "terminated",
+            "on_leave",
+            "terminated_pending",
+            "on_leave_pending",
+            "disabled",
+            "pending",
+            "incomplete_profile",
+            "deleted"
+          ],
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "not_defined"
+        },
+        "hire_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "address": {
+          "$ref": "#/$defs/person_address_response"
+        }
+      }
+    }
+  }
+}

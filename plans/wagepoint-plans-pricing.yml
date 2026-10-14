@@ -1,0 +1,38 @@
+generated: '2026-10-14'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.wagepoint.com/pricing/
+sources:
+- https://www.wagepoint.com/pricing/
+name: Wagepoint pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Solo
+  price_text: $20 /mo
+  price: 20
+  description: Best for businesses that run one payroll a month.
+  features:
+  - One payroll run per month
+  - One pay group
+  - Direct deposit
+  - Tax calculations
+  - T4s and T4As
+  - Records of employment
+  - Reporting dashboard
+  limits:
+  - name: payroll_runs_per_month
+    limit_text: 1 payroll/month limit
+- name: Unlimited
+  price_text: $40 /mo
+  price: 40
+  description: Pay your team as frequently as you need to with one all‑inclusive monthly price.
+  features:
+  - Unlimited pay runs per month
+  - Unlimited pay groups
+  - Direct deposit
+  - Tax calculations
+  - T4s and T4As
+  - Records of employment
+  - Reporting dashboard
+docs: https://www.wagepoint.com/pricing/

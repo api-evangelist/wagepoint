@@ -1,0 +1,12 @@
+generated: '2026-10-14'
+method: searched
+probe: true
+source: https://trust.wagepoint.com/
+url: https://trust.wagepoint.com/
+certifications:
+- SOC 2
+evidence:
+- source: https://trust.wagepoint.com/
+  keywords:
+  - soc 2
+  - trust center

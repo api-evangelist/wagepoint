@@ -1,0 +1,88 @@
+generated: '2026-10-14'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 5
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - identity
+  - other
+  - source
+  - website
+hosts:
+- host: api.wagepoint.com
+  found_by:
+  - apis[]
+  - contract-discovery
+  types: []
+  serves:
+  - api
+  - docs
+  registrable_domain: wagepoint.com
+  role: api
+  relation: own
+- host: dashboard.wagepoint.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: wagepoint.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: trust.wagepoint.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Compliance
+  serves: []
+  registrable_domain: wagepoint.com
+  role: other
+  relation: own
+- host: wagepoint.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: wagepoint.com
+  role: website
+  relation: own
+- host: www.wagepoint.com
+  found_by:
+  - pointer
+  - docs-index
+  types:
+  - TermsOfService
+  - Pricing
+  - Newsroom
+  - Login
+  - ChangeLog
+  - Blog
+  serves:
+  - docs
+  registrable_domain: wagepoint.com
+  role: identity
+  relation: own

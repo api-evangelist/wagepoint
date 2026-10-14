@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/wagepoint/main/json-schema/wagepoint-create-time-entries-request-schema.json",
+  "title": "create_time_entries_request",
+  "x-generated": "2026-10-14",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_original/wagepoint-api-openapi.json#/components/schemas/create_time_entries_request",
+  "type": "object",
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/create_time_entry_request"
+      }
+    }
+  },
+  "$defs": {
+    "create_time_entry_request": {
+      "type": "object",
+      "properties": {
+        "person_id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "work_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "hours": {
+          "type": "number",
+          "format": "double"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
