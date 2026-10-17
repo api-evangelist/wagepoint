@@ -1,0 +1,29 @@
+{
+  "provider": "wagepoint",
+  "sources": [
+    "_original/wagepoint-api-openapi.json"
+  ],
+  "outputs": [
+    "wagepoint-companies-api-openapi.yml",
+    "wagepoint-health-api-openapi.yml",
+    "wagepoint-mcp-api-openapi.yml",
+    "wagepoint-pay-groups-api-openapi.yml",
+    "wagepoint-persons-api-openapi.yml",
+    "wagepoint-time-entries-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "wagepoint-api-openapi.json: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "wagepoint-api-openapi.json: declared missing tag: Companies",
+    "wagepoint-api-openapi.json: declared missing tag: Health",
+    "wagepoint-api-openapi.json: declared missing tag: MCP",
+    "wagepoint-api-openapi.json: declared missing tag: Pay Groups",
+    "wagepoint-api-openapi.json: declared missing tag: Persons",
+    "wagepoint-api-openapi.json: declared missing tag: Time Entries",
+    "apis.yml register: written (+6 apis, 7 total)"
+  ],
+  "skipped": []
+}

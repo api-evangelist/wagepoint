@@ -70,18 +70,132 @@ common:
   url: https://wagepoint.com
 apis:
 - name: Wagepoint Public API
-  description: Public REST API for partners and integrations to access Wagepoint Company, Person, Pay Group, and Time data.
+  description: >-
+    Public REST API for partners and integrations to access Wagepoint Company, Person, Pay Group, and
+    Time data.
   humanURL: https://api.wagepoint.com/swagger.json
   baseURL: https://api.wagepoint.com/api
   aid: wagepoint:wagepoint-public-api
-- aid: wagepoint:wagepoint-public-api-api
-  name: Wagepoint Public API API
-  description: Public REST API for partners and integrations to access Wagepoint Company, Person, Pay Group, and Time data.
+- aid: wagepoint:wagepoint-companies-api
+  name: Wagepoint Companies API
+  description: The Companies API from Wagepoint — 2 operation(s) for companies.
   humanURL: https://api.wagepoint.com/swagger.json
-  baseURL: /api
+  baseURL: https://api.wagepoint.com/api
+  tags:
+  - Companies
   properties:
   - type: OpenAPI
-    url: openapi/_original/wagepoint-api-openapi.json
+    url: openapi/wagepoint-companies-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/wagepoint-company-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-request-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-company-list-item-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-person-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-create-time-entries-request-schema.json
+- aid: wagepoint:wagepoint-health-api
+  name: Wagepoint Health API
+  description: The Health API from Wagepoint — 2 operation(s) for health.
+  humanURL: https://api.wagepoint.com/swagger.json
+  baseURL: https://api.wagepoint.com/api
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/wagepoint-health-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/wagepoint-company-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-request-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-company-list-item-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-person-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-create-time-entries-request-schema.json
+- aid: wagepoint:wagepoint-mcp-api
+  name: Wagepoint MCP API
+  description: The MCP API from Wagepoint — 1 operation(s) for mcp.
+  humanURL: https://api.wagepoint.com/swagger.json
+  baseURL: https://api.wagepoint.com/api
+  tags:
+  - MCP
+  properties:
+  - type: OpenAPI
+    url: openapi/wagepoint-mcp-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/wagepoint-company-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-request-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-company-list-item-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-person-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-create-time-entries-request-schema.json
+- aid: wagepoint:wagepoint-pay-groups-api
+  name: Wagepoint Pay Groups API
+  description: The Pay Groups API from Wagepoint — 1 operation(s) for pay groups.
+  humanURL: https://api.wagepoint.com/swagger.json
+  baseURL: https://api.wagepoint.com/api
+  tags:
+  - Pay Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/wagepoint-pay-groups-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/wagepoint-company-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-request-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-company-list-item-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-person-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-create-time-entries-request-schema.json
+- aid: wagepoint:wagepoint-persons-api
+  name: Wagepoint Persons API
+  description: The Persons API from Wagepoint — 1 operation(s) for persons.
+  humanURL: https://api.wagepoint.com/swagger.json
+  baseURL: https://api.wagepoint.com/api
+  tags:
+  - Persons
+  properties:
+  - type: OpenAPI
+    url: openapi/wagepoint-persons-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/wagepoint-company-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-request-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-update-time-entry-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-company-list-item-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-paged-response-person-response-schema.json
+  - type: JSONSchema
+    url: json-schema/wagepoint-create-time-entries-request-schema.json
+- aid: wagepoint:wagepoint-time-entries-api
+  name: Wagepoint Time Entries API
+  description: The Time Entries API from Wagepoint — 2 operation(s) for time entries.
+  humanURL: https://api.wagepoint.com/swagger.json
+  baseURL: https://api.wagepoint.com/api
+  tags:
+  - Time Entries
+  properties:
+  - type: OpenAPI
+    url: openapi/wagepoint-time-entries-api-openapi.yml
   - type: JSONSchema
     url: json-schema/wagepoint-company-response-schema.json
   - type: JSONSchema
